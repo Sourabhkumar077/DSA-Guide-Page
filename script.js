@@ -1,43 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
             // --- REFACTORED AND ROBUST INITIALIZATION ---
-            
-            // Function to apply the theme
-            function applyTheme(theme) {
-                const darkIcon = document.getElementById('theme-toggle-dark-icon');
-                const lightIcon = document.getElementById('theme-toggle-light-icon');
-
-                if (theme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                    if (lightIcon) lightIcon.classList.remove('hidden');
-                    if (darkIcon) darkIcon.classList.add('hidden');
-                    localStorage.setItem('color-theme', 'dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    if (darkIcon) darkIcon.classList.remove('hidden');
-                    if (lightIcon) lightIcon.classList.add('hidden');
-                    localStorage.setItem('color-theme', 'light');
-                }
-            }
-
-            // Function to set up the theme toggle
-            function setupThemeToggle() {
-                const themeToggleBtn = document.getElementById('theme-toggle');
-                if (!themeToggleBtn) return;
-
-                const savedTheme = localStorage.getItem('color-theme');
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-                if (savedTheme) {
-                    applyTheme(savedTheme);
-                } else {
-                    applyTheme(prefersDark ? 'dark' : 'light');
-                }
-
-                themeToggleBtn.addEventListener('click', () => {
-                    const isDark = document.documentElement.classList.contains('dark');
-                    applyTheme(isDark ? 'light' : 'dark');
-                });
-            }
 
             // Function to set up the accordion
             function setupAccordion() {
@@ -60,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const card = document.createElement('div');
                     card.className = 'card overflow-hidden';
                     const button = document.createElement('button');
-                    button.className = 'accordion-button w-full p-6 text-left flex justify-between items-center hover:bg-gray-200/50 dark:hover:bg-slate-800/70 transition-all duration-300';
+                    button.className = 'accordion-button w-full p-6 text-left flex justify-between items-center hover:bg-gray-200/50 transition-all duration-300';
                     button.innerHTML = `
                         <div>
                             <h3 class="text-lg sm:text-xl font-bold text-main">Week ${weekData.week}: ${weekData.focus}</h3>
@@ -132,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // --- RUN ALL SETUP FUNCTIONS ---
-            setupThemeToggle();
             setupAccordion();
             setupScrollAnimations();
             setupHeaderScroll();
