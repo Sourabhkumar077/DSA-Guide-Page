@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate 60-Day DSA Placement Preparation Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header" class="header-bg backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200 dark:border-slate-800 transition-all duration-300">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-lg sm:text-xl font-bold text-main">🚀 DSA Prep Guide</a>
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:flex space-x-8">
+                    <a href="#foundation" class="nav-link transition-colors">Foundation</a>
+                    <a href="#blueprint" class="nav-link transition-colors">Blueprint</a>
+                    <a href="#strategy" class="nav-link transition-colors">Strategy</a>
+                    <a href="#resources" class="nav-link transition-colors">Resources</a>
+                </div>
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 icon-color" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 icon-color" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05A1 1 0 003.636 6.464l.707.707a1 1 0 001.414-1.414l-.707-.707zM3 11a1 1 0 100-2H2a1 1 0 100 2h1zM6.464 14.364l-.707.707a1 1 0 001.414 1.414l.707-.707a1 1 0 00-1.414-1.414z"></path></svg>
+                </button>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="icon-color focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 mobile-menu-bg backdrop-blur-xl z-40">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#foundation" class="text-2xl font-bold nav-link transition-colors menu-link">Foundation</a>
+            <a href="#blueprint" class="text-2xl font-bold nav-link transition-colors menu-link">Blueprint</a>
+            <a href="#strategy" class="text-2xl font-bold nav-link transition-colors menu-link">Strategy</a>
+            <a href="#resources" class="text-2xl font-bold nav-link transition-colors menu-link">Resources</a>
+        </div>
+    </div>
+
+
+    <main class="container mx-auto px-4 sm:px-6 py-12">
+        <!-- Main Title Section -->
+        <section class="text-center mb-16 sm:mb-20">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-main mb-4">Ultimate 60-Day DSA</h1>
+            <p class="text-lg md:text-xl text-highlight">Your Comprehensive Guide to Acing Technical Interviews</p>
+        </section>
+
+        <!-- Overview & Mindset -->
+        <section id="overview" class="mb-16 scroll-fade-in">
+            <div class="card p-6 sm:p-8">
+                <h2 class="section-title">1. Overview & Mindset</h2>
+                <p class="mb-6 text-sub">This 60-day roadmap is your comprehensive guide to mastering Data Structures and Algorithms. The goal is not just to solve problems, but to internalize patterns, write clean code, and articulate your solutions like a pro.</p>
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <div class="card-feature-bg p-6 rounded-lg transition-transform hover:scale-105">
+                        <span class="text-4xl mb-2">🧠</span>
+                        <h3 class="text-xl font-semibold text-main">Conceptual Clarity</h3>
+                        <p class="text-sub">Truly understand *why* an algorithm works.</p>
+                    </div>
+                    <div class="card-feature-bg p-6 rounded-lg transition-transform hover:scale-105">
+                        <span class="text-4xl mb-2">👨‍💻</span>
+                        <h3 class="text-xl font-semibold text-main">Pattern Recognition</h3>
+                        <p class="text-sub">Identify problem types to apply known solutions.</p>
+                    </div>
+                    <div class="card-feature-bg p-6 rounded-lg transition-transform hover:scale-105">
+                        <span class="text-4xl mb-2">🗣️</span>
+                        <h3 class="text-xl font-semibold text-main">Interview Skills</h3>
+                        <p class="text-sub">Articulate your thought process clearly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week 0: The Foundation -->
+        <section id="foundation" class="mb-16 scroll-fade-in">
+            <div class="card p-6 sm:p-8">
+                <h2 class="section-title">2. Week 0: The Foundation (Pre-work)</h2>
+                <p class="mb-6 text-sub">Before the 60-day clock starts, spend a week ensuring your fundamentals are rock solid.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-start"><span class="text-highlight mr-3 mt-1">◆</span><div><strong class="text-main">Language Proficiency:</strong> Choose one language (C++, Java, or Python) and stick to it. Brush up on syntax and standard library functions.</div></li>
+                    <li class="flex items-start"><span class="text-highlight mr-3 mt-1">◆</span><div><strong class="text-main">Complexity Analysis:</strong> Master Big O notation. Understand how to calculate time and space complexity. Watch <a href="https://www.youtube.com/watch?v=D6xkbGLQesk" target="_blank" class="text-highlight hover:underline">this video</a>.</div></li>
+                    <li class="flex items-start"><span class="text-highlight mr-3 mt-1">◆</span><div><strong class="text-main">Setup Your Environment:</strong> Configure your code editor and learn basic Git commands. Create a GitHub repository to track your progress.</div></li>
+                    <li class="flex items-start"><span class="text-highlight mr-3 mt-1">◆</span><div><strong class="text-main">Understand the Process:</strong> Familiarize yourself with this guide. Set up a Notion/Evernote notebook for your notes.</div></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- The 60-Day Study Blueprint -->
+        <section id="blueprint" class="mb-16 scroll-fade-in">
+            <h2 class="section-title">3. The 60-Day Study Blueprint</h2>
+            
+            <div class="card p-6 sm:p-8 mb-8">
+                <h3 class="text-2xl font-semibold text-main mb-4">Daily Structure (3–4 hours/day)</h3>
+                <ul class="space-y-3 list-disc list-inside text-sub">
+                    <li><strong class="text-main">Concept Learning (45-60 mins):</strong> Watch a video lecture and read corresponding articles.</li>
+                    <li><strong class="text-main">Problem-Solving (90-120 mins):</strong> Solve 2-3 handpicked problems. If stuck, review the solution, understand it deeply, and then code it yourself.</li>
+                    <li><strong class="text-main">Revision & Notes (20-30 mins):</strong> Add learnings to your "Mistake Notebook".</li>
+                </ul>
+            </div>
+
+            <div id="accordion-container" class="space-y-4">
+                <!-- Weeks 1-8 will be generated by JS -->
+            </div>
+        </section>
+        
+        <!-- Interview Strategy -->
+        <section id="strategy" class="mb-16 scroll-fade-in">
+            <div class="card p-6 sm:p-8">
+                <h2 class="section-title">4. Interview Communication Strategy</h2>
+                <p class="mb-6 text-sub">Solving the problem is 50% of the job. Communicating it is the other 50%.</p>
+                <ol class="space-y-4">
+                    <li class="flex items-start"><span class="step-bg rounded-full h-8 w-8 text-center font-bold leading-8 mr-4 flex-shrink-0">1</span><div><strong class="text-main">Clarify:</strong> Ask questions about constraints and edge cases. Show the interviewer you're thinking before coding.</div></li>
+                    <li class="flex items-start"><span class="step-bg rounded-full h-8 w-8 text-center font-bold leading-8 mr-4 flex-shrink-0">2</span><div><strong class="text-main">Brute-Force:</strong> Always state the simple, obvious solution first. Analyze its complexity.</div></li>
+                    <li class="flex items-start"><span class="step-bg rounded-full h-8 w-8 text-center font-bold leading-8 mr-4 flex-shrink-0">3</span><div><strong class="text-main">Optimize:</strong> Explain the bottleneck and your plan to optimize. Justify your approach with complexity analysis.</div></li>
+                    <li class="flex items-start"><span class="step-bg rounded-full h-8 w-8 text-center font-bold leading-8 mr-4 flex-shrink-0">4</span><div><strong class="text-main">Code:</strong> Write clean, readable code. Talk while you code, explaining your logic.</div></li>
+                    <li class="flex items-start"><span class="step-bg rounded-full h-8 w-8 text-center font-bold leading-8 mr-4 flex-shrink-0">5</span><div><strong class="text-main">Test:</strong> Dry run with examples and discuss edge cases you would test against.</div></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section id="resources" class="mb-16 scroll-fade-in">
+            <div class="card p-6 sm:p-8">
+                <h2 class="section-title">5. Core Tools & Resources</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-main mb-2">Practice Platforms</h3>
+                        <ul class="space-y-2 text-sub">
+                            <li><a href="https://leetcode.com" target="_blank" class="nav-link">LeetCode</a></li>
+                            <li><a href="https://www.geeksforgeeks.org" target="_blank" class="nav-link">GeeksforGeeks (GFG)</a></li>
+                            <li><a href="https://www.codingninjas.com/codestudio" target="_blank" class="nav-link">CodeStudio</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-main mb-2">Video Lectures (YouTube)</h3>
+                        <ul class="space-y-2 text-sub">
+                            <li><a href="https://www.youtube.com/@takeUforward" target="_blank" class="nav-link">Striver (takeUforward)</a></li>
+                            <li><a href="https://www.youtube.com/@AdityaVerma" target="_blank" class="nav-link">Aditya Verma</a></li>
+                            <li><a href="https://www.youtube.com/@NeetCode" target="_blank" class="nav-link">NeetCode</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-main mb-2">CS Fundamentals</h3>
+                        <ul class="space-y-2 text-sub">
+                            <li><a href="https://www.youtube.com/@GateSmashers" target="_blank" class="nav-link">Gate Smashers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 border-t border-gray-200 dark:border-slate-800">
+        <p class="footer-text">Good luck! Your dedication over these 60 days will pay off.</p>
+        <p class="text-sm watermark mt-2">Created by Sourabh kumar</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
